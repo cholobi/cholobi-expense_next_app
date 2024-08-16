@@ -14,9 +14,7 @@ const Guest = async () => {
         <div className=' p-2 flex justify-center items-center'>
           <a
             href='#'
-            className={`${
-              !user && "bg-violet-700"
-            } px-4 py-1 rounded-md `}
+            className={`${!user && "bg-violet-700"} px-4 py-1 rounded-md `}
           >
             <SignedOut>
               <SignInButton>

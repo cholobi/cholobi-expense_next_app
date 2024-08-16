@@ -1,9 +1,7 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { db } from "./db";
-const checkUser = async () => {
+export const checkUser = async () => {
   const user = await currentUser();
-
-
   if (!user) {
     return null;
   }
@@ -12,4 +10,16 @@ const checkUser = async () => {
       cleckUserId: user.id,
     },
   });
+  if (loggedInUser) {
+    return loggedInUser;
+  }
+  const newUser = db.user.create({
+    data: {
+      cleckUserId: user.id,
+      name: `${user.firstName} ${user.lastName}`,
+      email: user.emailAddresses[0].emailAddress,
+      imageUrl: user.imageUrl,
+    },
+  });
+  return newUser;
 };

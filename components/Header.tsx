@@ -6,8 +6,11 @@ import {
   SignedOut,
 } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
+import { checkUser } from "@/lib/checkUser";
 const Header = async () => {
-  const user = await currentUser();
+  const user = await checkUser();
+  console.log("user", user);
+
   return (
     <div className=''>
       <div className='bg-black/80  p-2 flex justify-between'>
