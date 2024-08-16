@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang='en'>
+      <html lang='en' className="bg-gray-100">
         <body className={roboto.className}>
           <Header />
           {children}

@@ -11,10 +11,15 @@ const HomePage = async () => {
 
   return (
     <>
-      <div className='bg-red-500 p-2 flex flex-col items-center justify-center gap-y-1'>
-        <p className="text-xl">
-          Welcome <span className="text-lg font-semibold italic">{user.firstName}</span>
-        </p>
+      <div className=' p-2 flex flex-col items-center justify-center gap-y-1'>
+        <div className=' w-full lg:w-80 md:w-96  px-4 py-1'>
+          <p className='text-xl'>
+            Welcome{" "}
+            <span className='text-lg font-semibold '>
+              {user.firstName}
+            </span>
+          </p>
+        </div>
         <AddTransaction />
       </div>
     </>

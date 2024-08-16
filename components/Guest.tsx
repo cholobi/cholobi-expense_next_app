@@ -5,7 +5,7 @@ const Guest = async () => {
   return (
     <div className=' flex justify-center items-center'>
       <div className='flex flex-col p-2'>
-        <h1 className=' py-2 px-2 text-2xl text-center'>Welcome</h1>
+        <h1 className={"py-2 px-2 text-center text-2xl"}>Welcome</h1>
         {!user && (
           <p className='text-center'>
             Please sign in to manage your transactions
