@@ -13,13 +13,16 @@ const Header = async () => {
       <div className='bg-black/80  p-2 flex justify-between'>
         <h1 className='text-white text-lg py-1'>Expense Tracker</h1>
         {!user && (
-          <div className={`${!user && "bg-violet-700"} px-4 py-1 rounded-md `}>
+          <a
+            href='#'
+            className={`${!user && "bg-violet-700"} px-4 py-1 rounded-md `}
+          >
             <SignedOut>
               <SignInButton>
                 <span className='text-white text-sm'>Sign In</span>
               </SignInButton>
             </SignedOut>
-          </div>
+          </a>
         )}
         <SignedIn>
           <UserButton />
